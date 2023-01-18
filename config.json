@@ -1,3 +1,5 @@
 {
-	"TOKEN" : "MY_DISCORD_TOKEN"
+	"TOKEN" : "MY_BOT_KEY",
+	"trn_api_key" : "API_KEY_1",
+    "als_api_key" : "API_KEY_2"
 }

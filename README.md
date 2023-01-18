@@ -1,2 +1,2 @@
 # Wattsy
-Public version of the Discord bot Wattsy using the ALS API to deliver player stats on Discord servers
+Discord bot using the Apex Legends API to deliver player stats
