@@ -1,5 +1,5 @@
 {
 	"TOKEN" : "MY_BOT_KEY",
-	"trn_api_key" : "API_KEY_1",
-    "als_api_key" : "API_KEY_2"
+	"trn_api_key" : "TRN_API_KEY",
+    "als_api_key" : "ALS_API_KEY"
 }

@@ -1,2 +1,2 @@
 # Wattsy
-Discord bot using the Apex Legends API to deliver player stats
+Personal project of a Discord bot using the two Apex Legends stats APIs to deliver player stats, with custom commands

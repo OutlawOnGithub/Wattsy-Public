@@ -29,9 +29,8 @@ def main():
 
     if message.content.startswith('') and message.author != client.user:
       await client.change_presence(activity=discord.Activity(type=discord.ActivityType.playing, name=">help"))
-      #print(message.content)
       if random.randint(1, 500) == 1:
-        await message.channel.send(f"Belle bite {message.author.mention}")
+        await message.channel.send(f"[INSERT EASTER EGG] {message.author.mention}")
 
 
     if message.content.startswith('hey') or message.content.startswith(
@@ -67,14 +66,13 @@ def main():
         'je taime') != -1 or message.content.find(
         'simp') != -1) and message.author.id == 216707116369444864:
       ayer_id = 216707116369444864
-      #moi_id = 785316706884911134
       stk = [discord.utils.get(message.guild.stickers, name='bonk')]
       await message.channel.send(f"Go to horny jail <@{ayer_id}>", stickers=stk)
 
 
     if message.content.startswith('>help'):
       await client.change_presence(activity=discord.Activity(type=discord.ActivityType.playing, name=">help"))
-      await message.channel.send(f"Utilise >stats <pseudo> pour avoir les stats d'un joueur PC {message.author.mention} !")
+      await message.channel.send(f"Utilise `>stats <pseudo> <plateforme>` pour avoir les stats d'un joueur Apex {message.author.mention} !")
 
 
     if message.content.startswith('>stats'):
@@ -82,24 +80,27 @@ def main():
       args = message.content.split(" ")
       #print(args)
       if len(args) > 1:
-        player_name = args[1]
-        await message.channel.send(embed=utils.get_stats(player_name=player_name))
+        if len(args) == 2:
+          player_name = args[1]
+          await message.channel.send(embed=utils.get_stats(player_name=player_name))
+        elif len(args) == 3:
+          player_name = args[1]
+          platform = args[2]
+          await message.channel.send(embed=utils.get_stats(player_name=player_name, platform=platform))
+        else:
+          await message.channel.send(f"Utilise `>stats <pseudo> <PC/PS4/X1>`` pour avoir les stats d'un joueur Apex {message.author.mention} !")
       else:
-        await message.channel.send("Veuillez ajouter le nom du joueur !")
+        await message.channel.send(embed=utils.get_stats(player_name=player_name, platform=platform))
 
 
-    #utils.debug(message)
+  keep_alive()
 
-  client.run(TOKEN)
-
-  #keep_alive()
-
-  # try:
-  #   client.run(TOKEN)
-  # except discord.errors.HTTPException:
-  #   print("\n\n\nBLOCKED BY RATE LIMITS\nRESTARTING NOW\n\n\n")
-  #   os.system('kill 1')
-  #   os.system("python restarter.py")
+  try:
+    client.run(TOKEN)
+  except discord.errors.HTTPException:
+    print("\n\n\nBLOCKED BY RATE LIMITS\nRESTARTING NOW\n\n\n")
+    os.system('kill 1')
+    os.system("python restarter.py")
 
 
 if __name__ == "__main__":
