@@ -100,7 +100,7 @@ def main():
   except discord.errors.HTTPException:
     print("\n\n\nBLOCKED BY RATE LIMITS\nRESTARTING NOW\n\n\n")
     os.system('kill 1')
-    os.system("python restarter.py")
+    os.system("keep_alive.py")
 
 
 if __name__ == "__main__":
