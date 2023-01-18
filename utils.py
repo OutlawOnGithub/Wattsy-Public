@@ -62,3 +62,4 @@ class Utils():
       embed.set_footer(text="This bot was developped by OutlawOnApex and uses the ALS API")
       return embed
 
+
