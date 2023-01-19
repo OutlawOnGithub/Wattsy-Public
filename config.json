@@ -1,6 +1,7 @@
 {
-	"TOKEN" : "MY_BOT_KEY",
-	"trn_api_key" : "TRN_API_KEY",
-    "als_api_key" : "ALS_API_KEY"
+	"TOKEN" : "HIDDEN",
+	"trn_api_key" : "HIDDEN",
+    "als_api_key" : "HIDDEN",
+	"gpt_key" : "HIDDEN",
+	"lol_api_key" : "HIDDEN"
 }
-
