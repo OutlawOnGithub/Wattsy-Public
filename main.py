@@ -34,7 +34,7 @@ def main():
         if message.content.startswith('') and message.author != bot.user:
         #print(message.content)
             if random.randint(1, 500) == 1:
-                await message.channel.send(f"Belle bite {message.author.mention}")
+                await message.channel.send(f"[INSERT EASTER EGG] {message.author.mention}")
 
 
         if message.content.startswith(('salut','hey','bonjour','yo')):
